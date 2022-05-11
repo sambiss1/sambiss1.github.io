@@ -282,8 +282,54 @@
 
     </div>
     <!-- Import JS files-->
-    <script src="./src/assets/js/main.js"></script>
-    <script src="./src/assets/js/products.js"></script>
+    <script>
+        const showProduct = () => {
+    let productName = document.getElementById("productName");
+    let productPrice = document.getElementById("productPrice");
+    let productImage = document.getElementById("productImage");
+
+    const product = {
+        id: 1, name: "Men shoes", price: "250", picture: ("src/components/images/men-shoes-1.jpg")
+    };
+    productName.innerText = product.name;
+    productPrice.innerText = product.price + " $";
+    productImage.src = product.picture;
+    // console.log(product.name + " " + product.price);
+        }
+    </script>
+    <script>
+        let mobileCategoryMenu = document.getElementById("mobile__category__menu");
+
+/* Show Category Menu function */
+const showCategoryMenu = () => {
+    if (mobileCategoryMenu.style.display === "none") {
+        mobileCategoryMenu.classList.toggle("category__navigation__bar--mobile");
+    }
+    else {
+        mobileCategoryMenu.classList.replace("category__navigation__bar--mobile", "active__category__navigation__mobile");
+    }
+
+}
+/* Hide Category Menu function */
+const hideCategoryMenu = () => {
+    if (mobileCategoryMenu.style.display === "flex") {
+        mobileCategoryMenu.classList.toggle("active__category__navigation__mobile");
+    } else {
+        mobileCategoryMenu.classList.replace("active__category__navigation__mobile", "category__navigation__bar--mobile");
+    }
+
+}
+// Brand name 
+const brandName = document.getElementById("brand__name");
+const mainFunction = () => {
+    if (window.screen.width > "600px" && window.screen.width < "768px") {
+        brandName.style.fontSize = "2.5em";
+        brandName.style.color = "#000"
+    }
+}
+    </script>    
+    <!--<script src="./src/assets/js/main.js"></script>
+    <script src="./src/assets/js/products.js"></script>-->
 </body>
 
 </html>
