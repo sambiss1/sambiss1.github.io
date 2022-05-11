@@ -309,9 +309,8 @@ ul {
   flex-direction: column;
   background: #3E3737;
   color: #FFFFFF;
-  padding: 5%;
+  padding: 5% 5% 30%;
   margin: 0 0 20% 0;
-  padding-bottom: 20% !important;
 }
 .mobile__footer .footer__content {
   /* Footer content */
