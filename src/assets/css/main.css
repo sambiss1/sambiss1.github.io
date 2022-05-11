@@ -1,0 +1,203 @@
+/* Import font-family */
+/* Code for Mobile homepage   */
+/* Import font family*/
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nova+Mono&display=swap");
+/* Color */
+/* Font family */
+/* Code for Mobile homepage   */
+/* Header padding */
+/* Default parameter */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Josefin Sans", sans-serif;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+}
+
+/* Brand name */
+.brand__name {
+  font-family: "Nova Mono";
+  color: #A52615;
+}
+
+i {
+  color: #367E8F;
+}
+
+/* Main content */
+.main__content {
+  width: 100%;
+  display: flex;
+}
+
+/* Mobile version */
+@media screen and (max-width: 768px) {
+  /* Mobile Header */
+  .mobile__header {
+    width: 100%;
+    background-color: #FFFFFF;
+    display: flex;
+    height: 10%;
+    justify-content: space-between;
+    padding: 5%;
+    font-size: 2em;
+    position: static;
+    top: 0;
+    border-bottom: 0.2em solid #367E8F;
+  }
+
+  /* Category navigation bar for mobile version */
+  #mobile__category__menu.category__navigation__bar--mobile {
+    display: none;
+    left: 0;
+    transition: all 0.5s ease;
+  }
+
+  /* Active category menu navigation bar */
+  #mobile__category__menu.active__category__navigation__mobile {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: #27282c;
+    left: 100%;
+    top: 0;
+    transition: all 0.5s ease;
+    padding: 5%;
+    color: #FFFFFF;
+  }
+
+  .active__category__navigation__mobile ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Main navigation bar */
+  .main__navigation__bar--mobile {
+    position: fixed;
+    bottom: 0;
+    background: #FFFFFF;
+    width: 100%;
+    padding: 5%;
+    font-size: 2em;
+    border-top: 0.2em solid #367E8F;
+  }
+
+  .main__navigation__bar--mobile ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .main__content--mobile {
+    flex-direction: column;
+  }
+
+  .row {
+    height: auto;
+  }
+
+  /* First Section */
+  .first__section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../components/images/market-bags-1.jpg") no-repeat top left;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    padding: 0 5%;
+    flex-direction: column;
+    color: #FFFFFF;
+    height: 400px;
+  }
+
+  /* Second section */
+  .recently__added {
+    background: #c4c4c4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+  }
+
+  .row__title--mobile {
+    background: #367E8F;
+    color: #FFFFFF;
+    padding: 5%;
+    margin: 5%;
+  }
+
+  .product__container {
+    position: relative;
+    width: 100%;
+    padding: 5%;
+    margin: 0 0 20% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product__picture--container {
+    width: 100%;
+    height: 400px;
+    backface-visibility: hidden;
+  }
+
+  .product__picture--container:hover img {
+    opacity: 0.3;
+  }
+
+  .product__picture--container img {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Product details container */
+  .product__details--container {
+    text-align: center;
+    background: #FFFFFF;
+    width: 100%;
+    padding: 5%;
+  }
+
+  .product__picture--container .icon--overlay i {
+    background-color: #367E8F;
+    color: #FFFFFF;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 5%;
+  }
+
+  .category__name {
+    color: #FFFFFF;
+  }
+
+  .overlay__container--one {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+    /*width: 100%;
+        position: absolute;
+        right: 5%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+    */
+  }
+
+  .product__picture--container:hover .overlay__container--one {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

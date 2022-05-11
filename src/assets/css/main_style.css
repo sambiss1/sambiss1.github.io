@@ -1,0 +1,357 @@
+/* Import font-family */
+/* Code for Mobile homepage   */
+/* Import font family*/
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nova+Mono&display=swap");
+/* Color */
+/* Font family */
+/* Code for Mobile homepage   */
+/* Header padding */
+/* Default parameter */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Josefin Sans", sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+}
+
+/* Brand name */
+.brand__name {
+  font-family: "Nova Mono";
+  color: #A52615;
+}
+
+i {
+  color: #367E8F;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Main content */
+.main__content {
+  width: 100%;
+  display: flex;
+}
+
+/* Mobile version */
+@media screen and (max-width: 768px) {
+  /* Mobile Header */
+  .mobile__header {
+    width: 100%;
+    background-color: #FFFFFF;
+    display: flex;
+    height: 10%;
+    justify-content: space-between;
+    padding: 5%;
+    font-size: 2em;
+    position: static;
+    top: 0;
+    border-bottom: 0em solid #367E8F;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+  }
+
+  /* Category navigation bar for mobile version */
+  #mobile__category__menu.category__navigation__bar--mobile {
+    display: none;
+  }
+
+  /* Active category menu navigation bar */
+  #mobile__category__menu.active__category__navigation__mobile {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: #27282c;
+    left: 0;
+    top: 0;
+    transition: all 0.3s ease;
+    padding: 5%;
+    color: #FFFFFF;
+    opacity: 0.95;
+  }
+
+  .active__category__navigation__mobile ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+  }
+
+  /* Main navigation bar */
+  .main__navigation__bar--mobile {
+    position: fixed;
+    z-index: 99;
+    bottom: 0;
+    background: #FFFFFF;
+    width: 100%;
+    padding: 5%;
+    border-top: 0em solid #367E8F;
+  }
+
+  .main__navigation__bar--mobile ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .main__navigation__bar--mobile li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main__navigation__bar--mobile li i {
+    font-size: 2.4em;
+  }
+  .main__navigation__bar--mobile li span {
+    font-size: 1em;
+  }
+
+  .main__content--mobile {
+    flex-direction: column;
+  }
+
+  .row {
+    height: auto;
+  }
+
+  /* First Section */
+  .first__section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../components/images/market-bags-1.jpg") no-repeat top left;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    padding: 0 5%;
+    flex-direction: column;
+    color: #FFFFFF;
+    height: 500px;
+  }
+
+  /* Second section */
+  .recently__added {
+    background: #c4c4c4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5% 0;
+    width: 100%;
+  }
+
+  .row__title--mobile {
+    background: #367E8F;
+    color: #FFFFFF;
+    padding: 5%;
+    text-align: center;
+  }
+
+  .product__container {
+    width: 100%;
+    padding: 5%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product__picture--container {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  /*.product__picture--container img:hover {
+      opacity: 0;
+  }*/
+  .product__picture--container img {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Product picture container overlay*/
+  .icon--overlay {
+    width: 50px;
+    height: 50px;
+    background-color: #367E8F;
+    border-radius: 50%;
+    padding: 0.5em;
+    margin: 1em 0;
+  }
+
+  .product__picture--container .icon--overlay i {
+    color: #FFFFFF;
+    font-size: 2em;
+  }
+
+  .category__name {
+    color: #FFFFFF;
+  }
+
+  .overlay__container--one {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: all 0.3s ease;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5%;
+  }
+
+  .overlay__container--one:hover {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  /* Product details container */
+  .product__details--container {
+    text-align: center;
+    background: #FFFFFF;
+    width: 100%;
+    padding: 5%;
+  }
+
+  .la-star {
+    color: yellow;
+  }
+
+  span:last-child .la-star {
+    color: #c4c4c4;
+  }
+
+  /* End product details */
+  /* End (Recently added) */
+  /* Row announce */
+  .announce {
+    width: 100%;
+    margin: 0;
+    display: flex;
+  }
+
+  .announce img {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* End row announce */
+  /* Row top categorie */
+  .top__categories {
+    width: 100%;
+    padding: 5%;
+  }
+
+  /* Top categories container */
+  .top__categories--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+    margin: 5% 0 0;
+    padding: 5%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../components/images/women-model.jpg") no-repeat center center;
+    background-size: cover;
+  }
+
+  .top__categorie__name {
+    font-size: 2em;
+  }
+
+  /* Newsletter */
+  .newsletter__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #c4c4c4;
+    color: #A52615;
+    padding: 5%;
+  }
+  .newsletter__container h3 {
+    font-size: 1.4em;
+    margin: 0 0 5%;
+  }
+  .newsletter__container form {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0;
+  }
+  .newsletter__container form input {
+    font-size: 0.9em;
+    padding: 5%;
+  }
+  .newsletter__container form input[type=button] {
+    background: #367E8F;
+    color: #FFFFFF;
+    border: none;
+  }
+}
+/* Footer */
+.mobile__footer {
+  display: flex;
+  flex-direction: column;
+  background: #3E3737;
+  color: #FFFFFF;
+  padding: 5%;
+  margin: 0 0 20% 0;
+}
+.mobile__footer .footer__content {
+  /* Footer content */
+  margin: 5% 0 0;
+}
+.mobile__footer .footer__content h3 {
+  font-size: 1.4em;
+  margin: 0 0 2%;
+}
+.mobile__footer .footer__content i {
+  color: #FFFFFF;
+  font-size: 2em;
+}
+.mobile__footer .follow__us .social__links i {
+  transition: all 0.5s;
+}
+.mobile__footer .follow__us .social__links i:hover {
+  transition: 500ms linear;
+  transform: scale(1.2) rotate(360deg);
+}
+.mobile__footer .payment__methods__container {
+  width: 100%;
+  display: flex;
+}
+.mobile__footer .payment__methods__container .payment__methods {
+  width: 20%;
+  margin: 0 5%;
+}
+.mobile__footer .payment__methods__container .payment__methods img {
+  width: 100%;
+  height: 100%;
+}
+.mobile__footer copyright__container {
+  margin: 0 0 5%;
+}
+
+/* Screen sizes under 500px */
+@media screen and (max-width: 500px) {
+  .product__picture--container {
+    /* height: auto;*/
+  }
+}
+
+/*# sourceMappingURL=main_style.css.map */
