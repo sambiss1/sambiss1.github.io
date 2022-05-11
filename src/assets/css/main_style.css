@@ -131,7 +131,7 @@ ul {
 
   /* First Section */
   .first__section {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../components/images/market-bags-1.jpg") no-repeat top left;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../components/images/market-bags-1.jpg") no-repeat center;
     background-size: cover;
     display: flex;
     justify-content: center;
