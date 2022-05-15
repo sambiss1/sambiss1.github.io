@@ -6,6 +6,7 @@
 /* Font family */
 /* Code for Mobile homepage   */
 /* Header padding */
+/* Product box shadow */
 /* Default parameter */
 * {
   margin: 0;
@@ -181,6 +182,7 @@ ul {
     width: 100%;
   }
 
+  /* Row title */
   .row__title--mobile {
     background: #367E8F;
     color: #FFFFFF;
@@ -189,21 +191,25 @@ ul {
     width: 100%;
   }
 
+  /* Product container */
   .product__container {
     width: 100%;
-    padding: 5% 0;
-    margin: 0;
+    padding: 0;
+    margin: 5% 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 0px 0px 1px #dbdbdb;
   }
 
+  /* Product picture container */
   .product__picture--container {
     width: 100%;
     height: auto;
     position: relative;
   }
 
+  /* Product picture */
   .product__picture--container img {
     width: 100%;
     height: 100%;
@@ -309,12 +315,15 @@ ul {
 
   /* Newsletter */
   .newsletter__container {
+    /* Newsletter container */
     display: flex;
     flex-direction: column;
     width: 100%;
     background: #c4c4c4;
     color: #A52615;
     padding: 5%;
+    /* Newsletter title */
+    /* Newsletter form */
   }
   .newsletter__container h3 {
     font-size: 1.4em;
@@ -339,24 +348,23 @@ ul {
   /* Scroll to top button container */
   .scrollToTopButtonContainer {
     background-color: #367E8F;
-    width: 3em;
-    height: 3em;
+    width: 2.4em;
+    height: 2.4em;
     border-radius: 50%;
-    display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
-    right: 10%;
+    right: 5%;
     top: 80%;
-    display: none;
     animation: fadeOut 0.3s;
+    display: none;
   }
   .scrollToTopButtonContainer:hover {
     cursor: pointer;
   }
   .scrollToTopButtonContainer i {
-    color: #A52615;
-    font-size: 2em;
+    color: #FFFFFF;
+    font-size: 1.6em;
   }
   @keyframes fadeOut {
     0% {
@@ -372,12 +380,12 @@ ul {
 
   /* Footer */
   .mobile__footer {
+    /* mobile footer rules */
     display: flex;
     flex-direction: column;
     background: #3E3737;
     color: #FFFFFF;
     padding: 5% 5% 20%;
-    margin: 0 0 20% 0;
   }
   .mobile__footer .footer__content {
     /* Footer content */
