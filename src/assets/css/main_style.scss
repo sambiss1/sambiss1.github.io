@@ -196,6 +196,7 @@ ul {
         width: 100%;
     }
 
+    /* Row title */
     .row__title--mobile {
         background: $primary-color;
         color: $white-color;
@@ -204,25 +205,28 @@ ul {
         width: 100%;
     }
 
+    /* Product container */
     .product__container {
         width: 100%;
-        padding: $mobile__row-padding 0;
-        margin: 0;
+        padding: 0;
+        margin: 5% 0;
         display: flex;
         flex-direction: column;
         align-items: center;
+        box-shadow: $product__box-shadow;
     }
 
+    /* Product picture container */
     .product__picture--container {
         width: 100%;
         height: auto;
         position: relative;
     }
 
+    /* Product picture */
     .product__picture--container img {
         width: 100%;
         height: 100%;
-
     }
 
     /* Product picture container overlay*/
@@ -328,24 +332,24 @@ ul {
 
     /* Newsletter */
     .newsletter__container {
+        /* Newsletter container */
         display: flex;
         flex-direction: column;
         width: 100%;
-
         background: $row__background__color__variant1;
         color: $brand__name-color;
-
         padding: $mobile__row-padding;
 
+        /* Newsletter title */
         h3 {
             font-size: 1.4em;
             margin: 0 0 5%;
         }
 
+        /* Newsletter form */
         form {
             display: flex;
             flex-direction: row;
-
             width: 100%;
             margin: 0;
 
@@ -369,25 +373,25 @@ ul {
     /* Scroll to top button container */
     .scrollToTopButtonContainer {
         background-color: $primary-color;
-        width: 3em;
-        height: 3em;
+        width: 2.4em;
+        height: 2.4em;
         border-radius: 50%;
-        display: flex;
         justify-content: center;
         align-items: center;
         position: fixed;
-        right: 10%;
+        right: 5%;
         top: 80%;
-        display: none;
         animation: fadeOut .3s;
+        display: none;
+
 
         &:hover {
             cursor: pointer;
         }
 
         i {
-            color: $brand__name-color;
-            font-size: 2em;
+            color: $white-color;
+            font-size: 1.6em;
         }
 
         @keyframes fadeOut {
@@ -412,8 +416,6 @@ ul {
         background: $footer__background__color;
         color: $white-color;
         padding: 5% 5% 20%;
-        margin: 0 0 20% 0;
-
 
         .footer__content {
             /* Footer content */

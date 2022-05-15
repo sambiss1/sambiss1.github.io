@@ -32,14 +32,15 @@ const mainFunction = () => {
 let scrollToTopButton = document.querySelector(".scrollToTopButtonContainer")
 
 document.addEventListener("scroll", scrollTopFunction = (event) => {
-    console.log(window.innerWidth + " " + window.innerHeight);
-    if (window.innerHeight <= 600) {
-        scrollToTopButton.style.top = "70%";
+  
+    if (window.innerHeight <= 700) {
+        scrollToTopButton.style.top = "70% !important";
     }
 
     if (window.scrollY >= "20") {
         scrollToTopButton.style.display = "flex"
     } else {
+        
         scrollToTopButton.style.display = "none";
     }
 
