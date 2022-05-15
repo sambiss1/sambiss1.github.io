@@ -380,6 +380,7 @@ ul {
 
   /* Footer */
   .mobile__footer {
+    /* mobile footer rules */
     display: flex;
     flex-direction: column;
     background: #3E3737;
