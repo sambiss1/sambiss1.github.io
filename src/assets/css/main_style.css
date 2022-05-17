@@ -7,6 +7,11 @@
 /* Code for Mobile homepage   */
 /* Header padding */
 /* Product box shadow */
+/* Mobile display */
+/* Mobile row width */
+/* Column direction */
+/* Image size(width and height)*/
+/* Fixed element */
 /* Default parameter */
 * {
   margin: 0;
@@ -37,7 +42,7 @@ i {
 }
 
 ul {
-  list-style: none;
+  list-style-type: none;
 }
 
 /* Main content */
@@ -46,8 +51,24 @@ ul {
   display: flex;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Mobile version */
 @media screen and (max-width: 768px) {
+  /* All image size */
+  .image__size, .mobile__footer .payment__methods__container .payment__methods img, .announce img, .overlay__container--one, .product__picture--container img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .centeredItems, .scrollToTopButtonContainer, .product__container, .first__section, .showCategoryIcon, .cart__container, .brand__container, .main__navigation__bar--mobile li a, .main__navigation__bar--mobile li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   /* Mobile Header */
   .mobile__header {
     width: 100%;
@@ -84,7 +105,7 @@ ul {
   /* Active category menu navigation bar */
   #mobile__category__menu.active__category__navigation__mobile {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     position: absolute;
     width: 100%;
     height: 100vh;
@@ -92,7 +113,7 @@ ul {
     left: 0;
     top: 0;
     transition: all 0.3s ease;
-    padding: 5%;
+    padding: 0;
     color: #FFFFFF;
     opacity: 0.95;
     animation: slideLeft 0.3s;
@@ -113,14 +134,29 @@ ul {
     }
   }
   .active__category__navigation__mobile ul {
-    list-style: none;
+    /* Category list content */
     display: flex;
     flex-direction: column;
     transition: all 0.3s ease;
+    padding: 5%;
+  }
+  .active__category__navigation__mobile ul li a {
+    color: #FFFFFF;
+  }
+  .active__category__navigation__mobile ul span {
+    background: #367E8F;
+  }
+
+  .title__menu__categories {
+    display: flex;
+    justify-content: space-between;
+    background: #367E8F;
+    padding: 5%;
   }
 
   /* Main navigation bar */
   .main__navigation__bar--mobile {
+    height: 15%;
     position: fixed;
     z-index: 99;
     bottom: 0;
@@ -131,28 +167,39 @@ ul {
 
   /* Main navigation list(ul) */
   .main__navigation__bar--mobile ul {
-    list-style-type: none;
     display: flex;
     justify-content: space-around;
   }
 
   /* Main navigation list content */
   .main__navigation__bar--mobile li {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  }
+  .main__navigation__bar--mobile li a {
+    flex-direction: column;
+    color: #367E8F;
+  }
+  .main__navigation__bar--mobile li a:hover {
+    cursor: pointer;
   }
   .main__navigation__bar--mobile li i {
     font-size: 2.4em;
   }
   .main__navigation__bar--mobile li span {
     font-size: 1em;
+    color: #000000;
   }
 
   /* Mobile main  content direction */
   .main__content--mobile {
     flex-direction: column;
+  }
+
+  /* Brand  name */
+  /* Header cart container */
+  /* Show category icon container menu */
+  .showCategoryIcon {
+    text-decoration: none;
   }
 
   /* Row height */
@@ -164,8 +211,7 @@ ul {
   .first__section {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../components/images/market-bags-1.jpg") no-repeat center;
     background-size: cover;
-    display: flex;
-    justify-content: center;
+    align-items: flex-start;
     padding: 0 5%;
     flex-direction: column;
     color: #FFFFFF;
@@ -196,29 +242,21 @@ ul {
     width: 100%;
     padding: 0;
     margin: 5% 0;
-    display: flex;
     flex-direction: column;
-    align-items: center;
     box-shadow: 0px 0px 1px #dbdbdb;
   }
 
   /* Product picture container */
   .product__picture--container {
     width: 100%;
-    height: auto;
     position: relative;
   }
 
   /* Product picture */
-  .product__picture--container img {
-    width: 100%;
-    height: 100%;
-  }
-
   /* Product picture container overlay*/
   .icon--overlay {
-    width: 50px;
-    height: 50px;
+    width: 2.2em;
+    height: 2.2em;
     background-color: #367E8F;
     border-radius: 50%;
     padding: 0.5em;
@@ -227,7 +265,7 @@ ul {
 
   .product__picture--container .icon--overlay i {
     color: #FFFFFF;
-    font-size: 2em;
+    font-size: 1.2em;
   }
 
   .category__name {
@@ -239,12 +277,9 @@ ul {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
-    height: 100%;
-    width: 100%;
     position: absolute;
     opacity: 0;
     transition: all 0.3s ease;
-    background: rgba(0, 0, 0, 0.5);
     padding: 5%;
   }
 
@@ -277,14 +312,8 @@ ul {
     margin: 0;
     display: flex;
   }
-
-  .announce img {
-    width: 100%;
-    height: 100%;
-  }
-
   /* Banner pub, on bottom */
-  .banner__pub {
+  .second__anounce {
     height: 200px;
   }
 
@@ -305,8 +334,46 @@ ul {
     height: 500px;
     margin: 5% 0 0;
     padding: 5%;
+  }
+
+  .women__categories {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../components/images/women-model.jpg") no-repeat center center;
     background-size: cover;
+  }
+
+  .child__categories {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../components/images/child.jpg") no-repeat center center;
+    background-size: cover;
+  }
+
+  .men__categories {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../components/images/man-model.jpg") no-repeat center center;
+    background-size: cover;
+  }
+
+  .owl-nav {
+    display: flex;
+    justify-content: center;
+  }
+  .owl-nav button span {
+    font-size: 40px;
+  }
+
+  .owl-dots {
+    display: flex;
+    justify-content: center;
+    z-index: 999;
+    margin: 5% 0;
+  }
+  .owl-dots .owl-dot {
+    height: 1em;
+    width: 1em;
+    background: #367E8F !important;
+    margin: 0 0.4em;
+    border-radius: 50%;
+  }
+  .owl-dots .active {
+    background: #A52615 !important;
   }
 
   .top__categorie__name {
@@ -333,7 +400,6 @@ ul {
     display: flex;
     flex-direction: row;
     width: 100%;
-    margin: 0;
   }
   .newsletter__container form input {
     font-size: 0.9em;
@@ -348,12 +414,10 @@ ul {
   /* Scroll to top button container */
   .scrollToTopButtonContainer {
     background-color: #367E8F;
+    position: fixed;
     width: 2.4em;
     height: 2.4em;
     border-radius: 50%;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
     right: 5%;
     top: 80%;
     animation: fadeOut 0.3s;
@@ -385,7 +449,7 @@ ul {
     flex-direction: column;
     background: #3E3737;
     color: #FFFFFF;
-    padding: 5% 5% 20%;
+    padding: 5% 5% 30%;
   }
   .mobile__footer .footer__content {
     /* Footer content */
@@ -415,16 +479,13 @@ ul {
     transform: scale(1.2) rotate(360deg);
   }
   .mobile__footer .payment__methods__container {
+    /* Payment methods container */
     width: 100%;
     display: flex;
   }
   .mobile__footer .payment__methods__container .payment__methods {
-    width: 20%;
+    width: 25%;
     margin: 0 5%;
-  }
-  .mobile__footer .payment__methods__container .payment__methods img {
-    width: 100%;
-    height: 100%;
   }
   .mobile__footer copyright__container {
     /* Copyright container */
