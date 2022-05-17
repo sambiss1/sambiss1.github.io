@@ -104,7 +104,6 @@ a {
     #mobile__category__menu.active__category__navigation__mobile {
         display: $flex__display;
         flex-direction: $column__direction;
-
         position: absolute;
         width: $mobile__row_width;
         height: 100vh;
@@ -145,9 +144,11 @@ a {
         flex-direction: $column__direction;
         transition: all 0.3s ease;
         padding: $mobile__row-padding;
+        font-size: .8em !important;
 
         li a {
             color: $white-color;
+
         }
 
         span {
@@ -272,8 +273,11 @@ a {
         margin: 5% 0;
         @extend .centeredItems;
         flex-direction: $column__direction;
-
         box-shadow: $product__box-shadow;
+    }
+
+    .recentlyAdded {
+        height: auto;
     }
 
     /* Product picture container */
@@ -430,10 +434,6 @@ a {
 
     }
 
-
-
-
-
     .top__categorie__name {
         font-size: 2em;
     }
@@ -484,11 +484,11 @@ a {
         width: 2.4em;
         height: 2.4em;
         border-radius: 50%;
-
         right: 5%;
-        top: 80%;
+        top: 70%;
         animation: fadeOut .3s;
         display: none;
+        z-index: 9999;
 
         &:hover {
             cursor: pointer;
